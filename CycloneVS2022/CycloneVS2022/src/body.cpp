@@ -35,6 +35,11 @@ static inline void _checkInverseInertiaTensor(const Matrix3 &iitWorld)
  * Internal function to do an intertia tensor transform by a quaternion.
  * Note that the implementation of this function was created by an
  * automated code-generator and optimizer.
+ * 
+ * 
+ * [ orangelie's Solution ]
+ * A = DirectX::XMMatrixMultiply(rotmat, iitBody)
+ * iitWorld = DirectX::XMMatrixMultiply(A, DirectX::XMMatrixTranspose(rotmat))
  */
 static inline void _transformInertiaTensor(Matrix3 &iitWorld,
                                            const Quaternion &q,
@@ -101,6 +106,10 @@ static inline void _transformInertiaTensor(Matrix3 &iitWorld,
 /**
  * Inline function that creates a transform matrix from a
  * position and orientation.
+ * 
+ * 
+ * [ orangelie's Solution ]
+ * DirectX::XMMatrixAffineTransformation -> DirectX::XMMatrixTranspose -> m[0][3] = x, m[1][3] = y, m[2][3] = z
  */
 static inline void _calculateTransformMatrix(Matrix4 &transformMatrix,
                                              const Vector3 &position,
