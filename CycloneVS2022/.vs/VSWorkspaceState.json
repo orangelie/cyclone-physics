@@ -5,10 +5,11 @@
     "\\CycloneVS2022\\bin",
     "\\CycloneVS2022\\include",
     "\\CycloneVS2022\\include\\cyclone",
+    "\\CycloneVS2022\\lib",
     "\\CycloneVS2022\\src",
     "\\CycloneVS2022\\src\\demos",
-    "\\CycloneVS2022\\src\\demos\\bigballistic"
+    "\\CycloneVS2022\\src\\demos\\bigballistic",
+    "\\CycloneVS2022\\src\\demos\\blob"
   ],
-  "SelectedNode": "\\CycloneVS2022\\src\\body.cpp",
   "PreviewInSolutionExplorer": false
 }

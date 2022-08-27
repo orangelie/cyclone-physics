@@ -74,8 +74,7 @@ void Contact::calculateContactBasis()
     if (real_abs(contactNormal.x) > real_abs(contactNormal.y))
     {
         // Scaling factor to ensure the results are normalised
-        const real s = (real)1.0f/real_sqrt(contactNormal.z*contactNormal.z +
-            contactNormal.x*contactNormal.x);
+        const real s = (real)1.0f/real_sqrt(contactNormal.z*contactNormal.z + contactNormal.x*contactNormal.x);
 
         // The new X-axis is at right angles to the world Y-axis
         contactTangent[0].x = contactNormal.z*s;
@@ -83,16 +82,14 @@ void Contact::calculateContactBasis()
         contactTangent[0].z = -contactNormal.x*s;
 
         // The new Y-axis is at right angles to the new X- and Z- axes
-        contactTangent[1].x = contactNormal.y*contactTangent[0].x;
-        contactTangent[1].y = contactNormal.z*contactTangent[0].x -
-            contactNormal.x*contactTangent[0].z;
+        contactTangent[1].x = contactNormal.y*contactTangent[0].z;
+        contactTangent[1].y = contactNormal.z*contactTangent[0].x - contactNormal.x*contactTangent[0].z;
         contactTangent[1].z = -contactNormal.y*contactTangent[0].x;
     }
     else
     {
         // Scaling factor to ensure the results are normalised
-        const real s = (real)1.0/real_sqrt(contactNormal.z*contactNormal.z +
-            contactNormal.y*contactNormal.y);
+        const real s = (real)1.0/real_sqrt(contactNormal.z*contactNormal.z + contactNormal.y*contactNormal.y);
 
         // The new X-axis is at right angles to the world X-axis
         contactTangent[0].x = 0;
@@ -100,8 +97,7 @@ void Contact::calculateContactBasis()
         contactTangent[0].z = contactNormal.y*s;
 
         // The new Y-axis is at right angles to the new X- and Z- axes
-        contactTangent[1].x = contactNormal.y*contactTangent[0].z -
-            contactNormal.z*contactTangent[0].y;
+        contactTangent[1].x = contactNormal.y*contactTangent[0].z - contactNormal.z*contactTangent[0].y;
         contactTangent[1].y = -contactNormal.x*contactTangent[0].z;
         contactTangent[1].z = contactNormal.x*contactTangent[0].y;
     }
@@ -173,9 +169,7 @@ void Contact::calculateDesiredDeltaVelocity(real duration)
 
     // Combine the bounce velocity with the removed
     // acceleration velocity.
-    desiredDeltaVelocity =
-        -contactVelocity.x
-        -thisRestitution * (contactVelocity.x - velocityFromAcc);
+    desiredDeltaVelocity = -contactVelocity.x -thisRestitution * (contactVelocity.x - velocityFromAcc);
 }
 
 
@@ -366,9 +360,7 @@ Vector3 Contact::calculateFrictionImpulse(Matrix3 * inverseInertiaTensor)
         impulseContact.y /= planarImpulse;
         impulseContact.z /= planarImpulse;
 
-        impulseContact.x = deltaVelocity.data[0] +
-            deltaVelocity.data[1]*friction*impulseContact.y +
-            deltaVelocity.data[2]*friction*impulseContact.z;
+        impulseContact.x = deltaVelocity.data[0] + deltaVelocity.data[1]*friction*impulseContact.y + deltaVelocity.data[2]*friction*impulseContact.z;
         impulseContact.x = desiredDeltaVelocity / impulseContact.x;
         impulseContact.y *= friction * impulseContact.x;
         impulseContact.z *= friction * impulseContact.x;

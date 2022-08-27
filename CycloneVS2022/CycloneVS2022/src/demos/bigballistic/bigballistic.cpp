@@ -190,7 +190,7 @@ class BigBallisticDemo : public RigidBodyApplication
     /**
     * Holds the number of boxes in the simulation.
     */
-    const static unsigned boxes = 2;
+    const static unsigned boxes = 3;
 
     /** Holds the box data. */
     Box boxData[boxes];
@@ -267,7 +267,7 @@ void BigBallisticDemo::reset()
     for (Box *box = boxData; box < boxData+boxes; box++)
     {
         box->setState(z);
-        z += 90.0f;
+        z += 10.0f;
     }
 }
 
@@ -411,6 +411,11 @@ void BigBallisticDemo::generateContacts()
     // Check ground plane collisions
     for (Box *box = boxData; box < boxData+boxes; box++)
     {
+        for (Box* pbox = box + 1; pbox < boxData + boxes; pbox++)
+        {
+            cyclone::CollisionDetector::boxAndBox(*box, *pbox, &cData);
+        }
+
         if (!cData.hasMoreContacts()) return;
         cyclone::CollisionDetector::boxAndHalfSpace(*box, plane, &cData);
 

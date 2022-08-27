@@ -645,7 +645,7 @@ namespace cyclone {
             data[10] = c;
         }
 
-        /**
+        /**i,.
          * Returns a matrix which is this matrix multiplied by the given
          * other matrix.
          */
