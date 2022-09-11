@@ -291,7 +291,7 @@ static inline bool tryAxis(
 
     // These values may be updated
     real& smallestPenetration,
-    unsigned &smallestCase
+    unsigned& smallestCase
     )
 {
     // Make sure we have a normalized axis, and don't check almost parallel axes
