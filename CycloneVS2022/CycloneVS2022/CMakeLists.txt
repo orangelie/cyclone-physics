@@ -22,9 +22,8 @@ set(APP "./src/demos/app.cpp" "./src/demos/app.h")
 set(TIMING "./src/demos/timing.cpp" "./src/demos/timing.h")
 set(CYCLONE_MAIN "./src/demos/main.cpp" "./src/demos/ogl_headers.h" ${APP} ${TIMING})
 
-
 find_package(OpenGL REQUIRED)
-link_directories(${CMAKE_SOURCE_DIR}/CycloneVS2022/lib)
+link_directories(${CMAKE_SOURCE_DIR}/lib)
 
 
 
@@ -94,5 +93,5 @@ endif()
 
 add_custom_command(TARGET bigballistic POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_directory
-      ${CMAKE_SOURCE_DIR}/CycloneVS2022/bin
-      ${CMAKE_BINARY_DIR}/CycloneVS2022)
+      ${CMAKE_SOURCE_DIR}/bin
+      ${CMAKE_BINARY_DIR}/)

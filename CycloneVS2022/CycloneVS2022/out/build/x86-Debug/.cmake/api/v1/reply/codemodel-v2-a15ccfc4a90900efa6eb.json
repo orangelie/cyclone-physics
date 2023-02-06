@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ballistic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ballistic-Debug-d5a252d1e909432807a5.json",
+					"name" : "ballistic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bigballistic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bigballistic-Debug-944f7c83855f6e569bea.json",
+					"name" : "bigballistic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "blob::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-blob-Debug-5766894a55a5054f3526.json",
+					"name" : "blob",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bridge::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bridge-Debug-937f1fa7afd5c33bb821.json",
+					"name" : "bridge",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explosion::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explosion-Debug-4e485d54680f554a9966.json",
+					"name" : "explosion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fireworks::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fireworks-Debug-c40912005f011153c909.json",
+					"name" : "fireworks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "flightsim::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flightsim-Debug-5146d5b129401540e108.json",
+					"name" : "flightsim",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fracture::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fracture-Debug-de255c58851eaf171e69.json",
+					"name" : "fracture",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "platform::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-platform-Debug-9bf5fb8a4797fd2aa895.json",
+					"name" : "platform",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ragdoll::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ragdoll-Debug-8958949c9bfd736dc930.json",
+					"name" : "ragdoll",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sailboat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sailboat-Debug-3801c6747ebe3d86ad68.json",
+					"name" : "sailboat",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/parksangwo/Desktop/Github/cyclone-physics/CycloneVS2022/CycloneVS2022/out/build/x86-Debug",
+		"source" : "C:/Users/parksangwo/Desktop/Github/cyclone-physics/CycloneVS2022/CycloneVS2022"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

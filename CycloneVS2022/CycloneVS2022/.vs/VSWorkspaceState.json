@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\include",
+    "\\include\\cyclone",
+    "\\include\\gl",
+    "\\lib",
+    "\\out",
+    "\\src",
+    "\\src\\demos",
+    "\\src\\demos\\fireworks"
+  ],
+  "SelectedNode": "\\src\\particle.cpp",
+  "PreviewInSolutionExplorer": false
+}
